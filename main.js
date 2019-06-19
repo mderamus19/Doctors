@@ -4,18 +4,32 @@
 // Specialty (Oncologist, pediatrician, etc...)
 // Address of practice
 
+const createDoctor = function (name, specialty, address) {
+    return {
+        "name": name,
+        "specialty": specialty,
+        "address": address
+    }
+}
 
-
-
-
-
-
-
-
-
+const specialtyDoc = createDoctor("Doc McStuffin", "General Practicioner", "134 Fix it Way")
+ console.log(specialtyDoc)
 
 // Lightning Exercise 2: Write a factory function that creates an object that represents a pet. The function should accept two arguments.
 
 // Pet name
 // Pet breed
 // Invoke the factory function 3 times and place each animal in an array stored in a variable named BowWowKennels
+
+const createPet = (petName, petBreed) => {
+    return {
+        "name":petName,
+        "breed":petBreed
+    }
+}
+const BowWowKennels = [];
+BowWowKennels.push(createPet("CJ","Poodle"))
+BowWowKennels.push(createPet("Ebony","Lab"))
+BowWowKennels.push(createPet("Lucky","Bichon"))
+console.log(BowWowKennels)
+    
